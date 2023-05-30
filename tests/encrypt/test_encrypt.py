@@ -1,17 +1,14 @@
-# from challenges.challenge_encrypt_message import encrypt_message
-import pytest
 from challenges.challenge_encrypt_message import encrypt_message
+import pytest
 
 
 def test_encrypt_message():
     # pass
-    message = "SSOOLL"
+    message = "RENAN"
 
-    assert encrypt_message(message, -1) == "LLOOSS"  # esseOK
-    assert encrypt_message(message, 1) == "S_LLOOS"
-    assert encrypt_message(message, 2) == "LLOO_SS"
-    assert encrypt_message(message, 3) == "OSS_LLO"  # esseOK
-    assert encrypt_message(message, 4) == "LL_OOSS"  # esseOK
+    assert encrypt_message(message, -1) == "NANER"
+    assert encrypt_message(message, 3) == "NER_NA"
+    assert encrypt_message(message, 4) == "N_ANER"
 
     with pytest.raises(TypeError):
         encrypt_message(message, "")
